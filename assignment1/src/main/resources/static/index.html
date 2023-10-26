@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course Request Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1 style="text-align: center;">คำร้องขอเพิ่ม-ถอน รายวิชา</h1>
+    <h2 style="text-align: center;">คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h2>
+    <form id="courseRequestForm">
+        <div class="form-group" style="width: 120px;">
+            <label for="date" class="required-label">วันเดือนปีที่กรอก:</label>
+            <input type="text" id="date" name="date" readonly class="form-control">
+        </div>
+        <h2>ประวัตินักศึกษา</h2>
+        <div class="form-group" style="width: 100px;">
+            <label for="title" class="required-label">คำนำหน้า:</label>
+            <select id="title" name="title" required class="form-control">
+                <option value="Mr.">นาย</option>
+                <option value="Mrs.">นาง</option>
+                <option value="Ms.">นางสาว</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="firstName" class="required-label">ชื่อ:</label>
+            <input type="text" id="firstName" name="firstName" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="required-label">นามสกุล:</label>
+            <input type="text" id="lastName" name="lastName" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="registrationNumber" class="required-label">เลขทะเบียน:</label>
+            <input type="text" id="registrationNumber" name="registrationNumber" required inputmode="numeric" class="form-control">
+        </div>
+        <div class="form-group" style="width: 100px;">
+            <label for="yearOfStudy" class="required-label">ชั้นปีที่:</label>
+            <select id="yearOfStudy" name="yearOfStudy" required class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="fieldOfStudy" class="required-label">สาขาวิชา:</label>
+            <input type="text" id="fieldOfStudy" name="fieldOfStudy" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="advisor" class="required-label">อาจารย์ที่ปรึกษา:</label>
+            <input type="text" id="advisor" name="advisor" required class="form-control">
+        </div>
+        <h3>ที่อยู่นักศึกษา</h3>
+        <div class="form-group">
+            <label for="addressNumber" class="required-label">บ้านเลขที่:</label>
+            <input type="text" id="addressNumber" name="addressNumber" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="moo" class="required-label">หมู่ที่:</label>
+            <input type="text" id="moo" name="moo" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="subdistrict" class="required-label">ตำบล:</label>
+            <input type="text" id="subdistrict" name="subdistrict" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="district" class="required-label">อำเภอ:</label>
+            <input type="text" id="district" name="district" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="province" class="required-label">จังหวัด:</label>
+            <input type="text" id="province" name="province" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="postalCode" class="required-label">รหัสไปรษณีย์:</label>
+            <input type="text" id="postalCode" name="postalCode" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="mobileNumber" class="required-label">เบอร์โทรศัพท์มือถือ:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="homeNumber">เบอร์โทรศัพท์บ้าน:</label>
+            <input type="tel" id="homeNumber" name="homeNumber" class="form-control">
+        </div>
+        <!-- Reason Field -->
+        <div class="form-group">
+            <label for="reason" class="required-label">Reason for Add/Withdraw:</label>
+            <textarea id="reason" name="reason" required style="height: 150px;"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
